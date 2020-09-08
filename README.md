@@ -17,17 +17,16 @@ You should now be able to open the solution in Visual Studio 2019 by finding and
 
 # Running the app
 
-The project should now build. Confirm this via *Build* → *Build Solution* (or `CTRL+SHIFT+B`).
+The project should now build. Confirm this via *Build* → *Build Solution* (or `CTRL+SHIFT+B`/`Cmd+SHIFT+B`).
 
-You can now run the app by clicking the play button (▶), which should say *IIS Express*.
+You can now run the app by clicking the play button (▶).
 
 This should launch the website at: [https://localhost:44363/](https://localhost:44363/)
 
 # Running the tests
-These tests will also be run by the Jenkins job whenever you push.
 
 ## Running the web tests
-These tests are in the DotnetTemplate.Web.Tests project. No setup is required to run them and they'll also be run by the jenkins job whenever you push. See the sections below for how to run one test, all tests in a file or all the tests in the project.
+These tests are in the DotnetTemplate.Web.Tests project. No setup is required to run them. See the sections below for how to run one test, all tests in a file or all the tests in the project.
 
 ## Run one test
 Open the test file, find the test you want to run, click the icon to the left of the test name.
