@@ -10,6 +10,7 @@
      steps:
        - checkout
        - run: dotnet build
-       - run: |
-         cd DotnetTemplate.Web.Tests
-         dotnet test
+       - run:
+          command: |
+            cd DotnetTemplate.Web.Tests
+            dotnet test
