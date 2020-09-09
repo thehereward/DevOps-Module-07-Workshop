@@ -1,24 +1,24 @@
- version: 2.1
+version: 2.1
 
- orbs:
+orbs:
   win: circleci/windows@2.2.0
   slack: circleci/slack@3.4.2
 
- jobs:
-   build:
-     executor: win/default         
-     steps:
-       - checkout
-       - run: dotnet build
-       - run:
+jobs:
+  build:
+    executor: win/default
+    steps:
+      - checkout
+      - run: dotnet build
+      - run:
           command: |
             cd DotnetTemplate.Web.Tests
             dotnet test
-   notify:
-     executor: machine
-     steps:
-       - slack/status:
-          mentions: 'hereward'
+  notify:
+    executor: machine
+    steps:
+      - slack/status:
+          mentions: "hereward"
 
 workflows:
   version: 2
