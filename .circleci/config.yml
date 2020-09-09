@@ -6,8 +6,7 @@
 
  jobs:
    build:
-     executor: win/default     
-    
+     executor: win/default         
      steps:
        - checkout
        - run: dotnet build
@@ -20,3 +19,12 @@
      steps:
        - slack/status:
           mentions: 'hereward'
+
+workflows:
+  version: 2
+  build-and-notify:
+    jobs:
+      - build
+      - notify:
+          requires:
+            - build
