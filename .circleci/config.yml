@@ -2,6 +2,7 @@
 
  orbs:
   win: circleci/windows@2.2.0
+  slack: circleci/slack@3.4.2
 
  jobs:
    build:
@@ -14,3 +15,6 @@
           command: |
             cd DotnetTemplate.Web.Tests
             dotnet test
+      - slack/status:
+          mentions: 'hereward'
+          webhook: webhook
