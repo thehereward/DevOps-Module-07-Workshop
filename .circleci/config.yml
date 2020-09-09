@@ -15,7 +15,7 @@ jobs:
             cd DotnetTemplate.Web.Tests
             dotnet test
   notify:
-    executor: machine
+    machine: true
     steps:
       - slack/status:
           mentions: "hereward"
