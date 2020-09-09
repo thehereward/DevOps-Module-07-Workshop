@@ -17,4 +17,3 @@
             dotnet test
        - slack/status:
           mentions: 'hereward'
-          webhook: webhook
