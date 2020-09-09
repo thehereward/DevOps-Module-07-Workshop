@@ -15,5 +15,8 @@
           command: |
             cd DotnetTemplate.Web.Tests
             dotnet test
+   notify:
+     executor: machine
+     steps:
        - slack/status:
           mentions: 'hereward'
